@@ -28,6 +28,34 @@ function get_tax_due(float $price, int $quantity, int $tax_rate = 0): float {
 }
 ?>
 
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Product Name</th>
+        <th>Price (Php)</th>
+        <th>Stock</th>
+        <th>Reorder?</th>
+        <th>Total Value (Php)</th>
+        <th>Tax Due (Php)</th>
+    </tr>
+
+<?php
+foreach ($flowers as $product_name => $data) {
+    $price = $data["price"];
+    $stock = $data["stock"];
+?>
+    <tr>
+        <td><?php echo $product_name; ?></td>
+        <td><?php echo number_format($price, 2); ?></td>
+        <td><?php echo $stock; ?></td>
+        <td><?php echo get_reorder_message($stock); ?></td>
+        <td><?php echo number_format(get_total_value($price, $stock), 2); ?></td>
+        <td><?php echo number_format(get_tax_due($price, $stock, $tax_rate), 2); ?></td>
+    </tr>
+<?php
+}
+?>
+</table>
+
 <?php
 include "footer.php";
 ?>
