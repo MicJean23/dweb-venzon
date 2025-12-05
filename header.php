@@ -10,3 +10,4 @@
     <h1>Module 3: Functions/h1>
     <hr>
 </header>
+<?php include "nav.php"; ?>
