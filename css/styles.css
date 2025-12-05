@@ -37,25 +37,34 @@ p {
 }
 
 table {
-  background-color: #850825;
-  margin: 10px;
-  padding: 5px;
+  width: 90%;
+  margin: 20px auto;
+  background-color: #1a2e66;
   border: 1px solid #fbccbf;
-  border-spacing: 0px;
+  border-collapse: collapse;
 }
-  
+
 th {
-  text-transform: uppercase;
+  background-color: #20397c;
+  color: #fbccbf;
+  padding: 8px;
   text-align: left;
-  font-size: 0.75em;
-  letter-spacing: 0.2em;
-  padding: 5px 10px;
-  background-color: #fbccbf;
-  color: #850825;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
-  
+
 td {
-  padding: 5px 10px;
+  padding: 8px;
+  border-top: 1px solid #fbccbf;
+}
+
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(4),
+td:nth-child(5),
+td:nth-child(6) {
+  text-align: center;
 }
 
 a {
@@ -78,21 +87,17 @@ nav a {
 nav a:hover {
   color: #fff;
 }
- 
+
 .button {
   background-color: #fbccbf;
   color: #850825;
   border-color: #fbccbf;
   border-radius: 300px;
-  -webkit-transition: .3s background-color linear;
-  -moz-transition: .3s background-color linear;
-  -o-transition: .3s background-color linear;
   transition: .3s background-color linear;
   display: inline-block;
   padding: 10px 20px;
   margin-top: 10px;
   font-weight: 600;
-  font-style: normal;
   letter-spacing: 1px;
   text-align: center;
   text-decoration: none;
@@ -101,14 +106,10 @@ nav a:hover {
 
 .button:hover {
   background-color: #fcba63;
-  border-radius: 300px;
-  -webkit-transition: .1s background-color linear;
-  -moz-transition: .1s background-color linear;
-  -o-transition: .1s background-color linear;
   transition: .1s background-color linear;
   color: #850825;
 }
-  
+
 .offer {
   text-transform: uppercase;  
 }
